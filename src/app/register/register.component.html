@@ -1,0 +1,47 @@
+Registration Form
+<form class="form-horizontal" action="http://localhost:3000/register/" method="POST" ngNativeValidate #registerForm>
+  <div class="form-group form-data">
+    <label for="firstnm">FirstName:</label>
+    <input type="text" class="form-control" id="firstnm" placeholder="Enter firstname" [(ngModel)]="userdetails.firstname" name="first" required>
+  </div>
+  <div class="form-group form-data">
+    <label for="lastnm">LastName:</label>
+    <input type="text" class="form-control" id="lastnm" placeholder="Enter lastname" [(ngModel)]="userdetails.lastname" name="last" required>
+  </div>
+  <div class="form-group form-data">
+      <label class="control-label " for="email">Email:     </label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" [(ngModel)]="userdetails.email" name="email" required>
+  </div>
+  <div class="form-group form-data">
+    <label class="control-label " for="pwd">Password:     </label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" [(ngModel)]="userdetails.password" name="password" required>
+  </div>
+  <div class="form-group form-data">
+    <label for="usernm">UserName:</label>
+    <input type="text" class="form-control" id="usernm" placeholder="Enter usernm" [(ngModel)]="userdetails.username" name="user" required>
+  </div>
+  <div class="form-group form-data">
+    <label for="gender">Gender:</label>
+    <select class="form-control" id="gender" [(ngModel)]="userdetails.gender" name="gender" required>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
+  <div class="form-group form-data">
+    <label for="country">Country:</label>
+    <input type="text" class="form-control" id="country" [(ngModel)]="userdetails.country" name="country" required>
+  </div>
+  <div class="form-group form-data">
+    <label for="city">City:</label>
+    <input type="text" class="form-control" id="city" [(ngModel)]="userdetails.city" name="city" required>
+  </div>
+  <div class="form-group form-data">
+    <label for="hobbies">Hobbies:</label>
+    <select multiple class="form-control" id="hobbies" [(ngModel)]="userdetails.hobbies" name="hobbies" required>
+      <option *ngFor="let hobby of HobbiesList">{{hobby.name}}</option>
+    </select>
+  </div>
+  <div class="form-group form-data">
+      <button type="submit" class="btn btn-default" (click)=" registerForm.checkValidity() ? registerUser() : null">Submit</button>
+  </div>
+</form>

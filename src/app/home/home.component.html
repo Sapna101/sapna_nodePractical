@@ -1,0 +1,6 @@
+Users :
+<div *ngFor="let user of filtereddata" class="userlist">
+  {{user.firstname}}
+  <span *ngIf="!(user.pendingrequests.includes(currentUser))"><button type="submit" class="btn btn-default" (click)="sendRequest(user._id)">Add Friend</button></span>
+  <span *ngIf="user.pendingrequests.includes(currentUser)"><button type="submit" class="btn btn-default" >Requested</button></span>
+</div>

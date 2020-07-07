@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sapnaNodePractical"
+    }
+  },
+  "defaultProject": "sapnaNodePractical",
+  "cli": {
+    "analytics": "c42bbbc3-9ec2-4840-af61-3a583c31e185"
+  }
 }

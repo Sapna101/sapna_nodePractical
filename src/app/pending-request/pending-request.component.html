@@ -1,0 +1,8 @@
+<p>Friend Requests</p>
+<div *ngFor="let user of pendingfriendList" >
+  <div class="form-group form-data userlist" >
+      {{user.firstname}}
+      <button type="submit" class="btn btn-default" (click)="acceptUser(user._id)">Accept</button>&nbsp;
+      <button type="submit" class="btn btn-default" (click)="declineUser(user._id)">Decline</button>
+  </div>
+</div>
