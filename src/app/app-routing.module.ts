@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'myfriend', component: MyFriendComponent },
-  { path: 'pendingfriendrequest', component: PendingRequestComponent }
+  { path: 'pendingfriendrequest', component: PendingRequestComponent },
+  { path : '', component: LoginComponent }
 ];
 
 @NgModule({
